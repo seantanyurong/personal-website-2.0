@@ -12,14 +12,17 @@
   /* light theme */
   .theme-sleek {
     /* Tailwind orange-500 #f97316 */
-    --color-primary-main: 249 115 22;
+    /* --color-primary-main: 249 115 22; */
+    --color-primary-main: 0 0 0;
 
     /* Tailwind gray-700 #374151 */
-    --color-text-body: 55 65 81;
+    /* --color-text-body: 55 65 81; */
+    --color-text-body: 0 0 0;
+
     /* Tailwind gray-700 #374151 */
-    --color-text-heading: 55 65 81;
+    --color-text-heading: 0 0 0;
     /* Tailwind gray-700 #374151 */
-    --color-text-bold: 55 65 81;
+    --color-text-bold: 0 0 0;
     /* Tailwind gray-500 #6b7280 */
     --color-text-muted: 107 114 128;
     /* Tailwind orange-500 #f97316 */
