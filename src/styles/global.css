@@ -24,7 +24,7 @@
     /* Tailwind gray-700 #374151 */
     --color-text-bold: 0 0 0;
     /* Tailwind gray-500 #6b7280 */
-    --color-text-muted: 107 114 128;
+    --color-text-muted: 0 0 0;
     /* Tailwind orange-500 #f97316 */
     --color-text-link: 249 115 22;
     /* black */
@@ -155,7 +155,7 @@
   ul:not(.unset):not(:where([class~="prose"] *)) > li::before {
     position: absolute;
     left: 0;
-    content: "•";
+    content: "●";
     color: rgb(var(--color-text-muted));
   }
 
