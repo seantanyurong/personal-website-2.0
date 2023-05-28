@@ -23,6 +23,8 @@ My logic starting The 100 Club a year ago instead of running with a service base
 
 So I guess that pushes me towards starting an online business. But what niche is the question now.
 
+I think I'm gonna run with community for now, and really start figuring out what I like and don't like. It'll be an exploration and 12 communities in 12 months doesn't sound like too bad of an idea. Onwards and upwards I guess.
+
 ## Getting back into the work rhythm
 
 So in an effort to get back on track. Here's the plan.
