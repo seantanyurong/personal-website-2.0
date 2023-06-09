@@ -2,6 +2,7 @@
 import { readAll } from "../lib/markdoc/read";
 import { blog } from "../lib/markdoc/frontmatter.schema";
 import { project } from "../lib/markdoc/frontmatter.schema";
+import { community } from "../lib/markdoc/frontmatter.schema";
 import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import Intro from "../components/Intro.astro";
@@ -33,6 +34,19 @@ const sortedProjects = projects
       new Date(b.frontmatter.date).valueOf() -
       new Date(a.frontmatter.date).valueOf()
   );
+
+const communities = await readAll({
+  directory: "communities",
+  frontmatterSchema: community,
+});
+
+const sortedCommunities = communities
+  .filter((p) => p.frontmatter.draft !== true)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).valueOf() -
+      new Date(a.frontmatter.date).valueOf()
+  );
 ---
 
 <PageLayout>
@@ -40,6 +54,42 @@ const sortedProjects = projects
   <Fragment slot="main">
     <Intro />
     <section>
+      <ul>
+        {
+          sortedCommunities.map((community) => {
+            const formattedDate = new Date(
+              community.frontmatter.date
+            ).toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            });
+            return (
+              <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+                <div class="title">
+                  <a
+                    href={community.frontmatter.url}
+                    target="_blank"
+                    class="unset hover:text-text-link"
+                  >
+                    <span>{community.frontmatter.title}</span>
+                    <span>
+                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                    </span>
+                  </a>
+                </div>
+                <div class="text-text-muted text-sm italic pt-1">
+                  <time datetime={community.frontmatter.date.toISOString()}>
+                    {formattedDate}
+                  </time>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <section class="mt-14">
       <ul>
         {
           sortedProjects.map((project) => {
