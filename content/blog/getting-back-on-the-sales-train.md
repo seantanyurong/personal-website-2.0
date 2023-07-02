@@ -1,6 +1,6 @@
 ---
 external: false
-title: "Getting back on the sales train."
+title: "Getting Back on the Sales Train."
 date: 2023-06-10
 ---
 
