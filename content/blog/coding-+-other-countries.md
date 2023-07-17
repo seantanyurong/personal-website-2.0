@@ -1,6 +1,6 @@
 ---
 external: false
-title: "Coding + Other Countries?."
+title: "Coding + Other Countries?"
 date: 2023-07-08
 ---
 
