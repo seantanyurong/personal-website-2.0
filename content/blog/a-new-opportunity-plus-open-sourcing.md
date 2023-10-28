@@ -1,7 +1,8 @@
 ---
 external: false
-title: "A New Opportunity + Open Sourcing."
+title: 'A New Opportunity + Open Sourcing.'
 date: 2023-07-15
+draft: true
 ---
 
 Tiring week.
