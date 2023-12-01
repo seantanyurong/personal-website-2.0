@@ -1,7 +1,8 @@
 ---
 external: false
-title: "Coding + Other Countries?"
+title: 'Coding + Other Countries?'
 date: 2023-07-08
+draft: true
 ---
 
 Once again, I find myself just coding a lot this week. I figure it's because it's the most rewarding to see whatever work you put in be reflected so quickly in front of you. I'm just reminded of how time consuming the details are when coding. Stuff most people probably won't realise of think about. But Dungeon Meetup is shaping up, so I'm quite satisfied with the overall look and functionality. The only question is whether I'm going to want to market this properly. I know the right channels, and I'm also in the right channels. But I kind of don't want to be puclicly known to be building this. Would prefer if I can launch this anonymously and ask the respective LGSs and playgroups to join anonymously. Which is probably very difficult. I think I can finish the full functionality by the next week if I really work hard.

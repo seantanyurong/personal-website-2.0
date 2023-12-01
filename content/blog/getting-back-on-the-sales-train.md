@@ -1,7 +1,8 @@
 ---
 external: false
-title: "Getting Back on the Sales Train."
+title: 'Getting Back on the Sales Train.'
 date: 2023-06-10
+draft: true
 ---
 
 A rather quick, and not too eventful week.

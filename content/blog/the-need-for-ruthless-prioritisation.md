@@ -1,8 +1,9 @@
 ---
 external: false
-title: "The Need for Ruthless Prioritization."
-description: "Am I prioritising?"
+title: 'The Need for Ruthless Prioritization.'
+description: 'Am I prioritising?'
 date: 2022-05-13
+draft: true
 ---
 
 Let's talk a bit about prioritization. And no, I'm not some expert that's gonna share frameworks on how you can best stick to weekly goals + yearly resolutions and whatnot (although I do have systems I use). For those juicy life optimization tips, I'm afraid you're going to have to scour around YouTube for some productivity gurus - shouldn't take too long.

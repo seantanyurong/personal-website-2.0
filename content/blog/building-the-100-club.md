@@ -1,8 +1,9 @@
 ---
 external: false
 title: "We're Building The 100 Club."
-description: "An update as we progress onto the next stage."
+description: 'An update as we progress onto the next stage.'
 date: 2022-05-28
+draft: true
 ---
 
 So a while ago, I wrote a post about how I was considering building an entrepreneurial community.

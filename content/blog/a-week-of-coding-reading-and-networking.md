@@ -1,7 +1,8 @@
 ---
 external: false
-title: "A Week of Coding, Reading and Networking."
+title: 'A Week of Coding, Reading and Networking.'
 date: 2023-07-02
+draft: true
 ---
 
 Quite a bit of time this week spent just coding, reading and attending networking events.

@@ -1,8 +1,9 @@
 ---
 external: false
-title: "Pausing and Reflecting."
-description: "To the drawing board."
+title: 'Pausing and Reflecting.'
+description: 'To the drawing board.'
 date: 2023-05-23
+draft: true
 ---
 
 A recent workshop I attended discussed the power of gaining clarity through penning down thoughts.

@@ -1,7 +1,8 @@
 ---
 external: false
-title: "My First Week of Summer."
+title: 'My First Week of Summer.'
 date: 2023-06-03
+draft: true
 ---
 
 So I'm considering my past week my first official week of summer even though I'm technically a month in. First week was an NOC module, second week was down sick, third week was travelling, which brings me to last week.

@@ -1,8 +1,9 @@
 ---
 external: false
-title: "My 1st landing page after 1 month of learning HTML & CSS."
-description: "Coding beginnings."
+title: 'My 1st landing page after 1 month of learning HTML & CSS.'
+description: 'Coding beginnings.'
 date: 2021-03-24
+draft: true
 ---
 
 🌧️

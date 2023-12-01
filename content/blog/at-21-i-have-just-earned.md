@@ -1,8 +1,9 @@
 ---
 external: false
 title: "At 21, I Have Just Earned $45k as an Upwork Freelancer - here's my one tip."
-description: "Just a quick tip."
+description: 'Just a quick tip.'
 date: 2022-01-08
+draft: true
 ---
 
 My one tip:
