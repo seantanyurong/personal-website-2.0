@@ -54,34 +54,6 @@ const sortedGoals = goals
     <section>
       <ul>
         {
-          sortedCommunities.map((community) => {
-            const formattedDate = new Date(community.frontmatter.date).toLocaleDateString('en-us', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
-            return (
-              <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
-                <div class='title'>
-                  <a href={community.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
-                    <span>{community.frontmatter.title}</span>
-                    <span>
-                      <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
-                    </span>
-                  </a>
-                </div>
-                <div class='text-text-muted text-sm italic pt-1'>
-                  <time datetime={community.frontmatter.date.toISOString()}>{formattedDate}</time>
-                </div>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </section>
-    <section class='mt-14'>
-      <ul>
-        {
           sortedProjects.map((project) => {
             const formattedDate = new Date(project.frontmatter.date).toLocaleDateString('en-us', {
               year: 'numeric',
@@ -100,6 +72,34 @@ const sortedGoals = goals
                 </div>
                 <div class='text-text-muted text-sm italic pt-1'>
                   <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <section class='mt-14'>
+      <ul>
+        {
+          sortedCommunities.map((community) => {
+            const formattedDate = new Date(community.frontmatter.date).toLocaleDateString('en-us', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            });
+            return (
+              <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
+                <div class='title'>
+                  <a href={community.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
+                    <span>{community.frontmatter.title}</span>
+                    <span>
+                      <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
+                    </span>
+                  </a>
+                </div>
+                <div class='text-text-muted text-sm italic pt-1'>
+                  <time datetime={community.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
             );

@@ -1,4 +1,4 @@
 ---
-title: 'Goal: Build and paint a Warhammer Army'
+title: 'Project: Build and paint a Warhammer Army'
 description: 'In the future'
 ---
