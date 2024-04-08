@@ -4,20 +4,12 @@ import { blog } from '../lib/markdoc/frontmatter.schema';
 import { project } from '../lib/markdoc/frontmatter.schema';
 import { community } from '../lib/markdoc/frontmatter.schema';
 import { goal } from '../lib/markdoc/frontmatter.schema';
+import { bucketList } from '../lib/markdoc/frontmatter.schema';
 import PageMeta from '../components/PageMeta.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import Intro from '../components/Intro.astro';
 import AboutTheTheme from '../components/AboutTheTheme.astro';
 import { SITE_TITLE } from '../config';
-
-const posts = await readAll({
-  directory: 'blog',
-  frontmatterSchema: blog,
-});
-
-const sortedPosts = posts
-  .filter((p) => p.frontmatter.draft !== true)
-  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 
 const projects = await readAll({
   directory: 'projects',
@@ -42,9 +34,14 @@ const goals = await readAll({
   frontmatterSchema: goal,
 });
 
-const sortedGoals = goals
-  .filter((p) => p.frontmatter.draft !== true)
-  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+const sortedGoals = goals.filter((p) => p.frontmatter.draft !== true);
+
+const bucketLists = await readAll({
+  directory: 'bucketList',
+  frontmatterSchema: bucketList,
+});
+
+const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true);
 ---
 
 <PageLayout>
@@ -111,11 +108,6 @@ const sortedGoals = goals
       <ul>
         {
           sortedGoals.map((goal) => {
-            // const formattedDate = new Date(goal.frontmatter.date).toLocaleDateString('en-us', {
-            //   year: 'numeric',
-            //   month: 'short',
-            //   day: 'numeric',
-            // });
             return (
               <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
                 <div class='title'>
@@ -130,39 +122,23 @@ const sortedGoals = goals
         }
       </ul>
     </section>
-    <!-- <section class='mt-14'>
+    <section class='mt-14'>
       <ul>
         {
-          sortedPosts.map((post) => {
-            const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-us', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
+          sortedBucketLists.map((bucketList) => {
             return (
               <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
                 <div class='title'>
-                  {post.frontmatter.external ? (
-                    <a href={post.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
-                      <span>{post.frontmatter.title}</span>
-                      <span>
-                        <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square pt-1' />
-                      </span>
-                    </a>
-                  ) : (
-                    <a href={`/blog/${post.slug}`} class='unset hover:text-text-link'>
-                      {post.frontmatter.title}
-                    </a>
-                  )}
+                  <span>{bucketList.frontmatter.title}</span>
                 </div>
-                <div class='text-text-muted text-sm italic'>
-                  <time datetime={post.frontmatter.date.toISOString()}>{formattedDate}</time>
+                <div class='text-text-muted text-sm italic pt-1'>
+                  <span>{bucketList.frontmatter.description}</span>
                 </div>
               </li>
             );
           })
         }
       </ul>
-    </section> -->
+    </section>
   </Fragment>
 </PageLayout>

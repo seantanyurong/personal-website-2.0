@@ -1,4 +1,4 @@
 ---
-title: 'Project: Become a NTRP 5.0 rated Tennis Player'
+title: 'Goal: To make it to Tennis UTR 6 by 35'
 description: 'In the future'
 ---

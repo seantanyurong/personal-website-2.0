@@ -57,3 +57,7 @@ export const community = baseSchema.extend({
 export const goal = baseSchema.extend({
   description: z.string(),
 });
+
+export const bucketList = baseSchema.extend({
+  description: z.string(),
+});
