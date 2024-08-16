@@ -5,6 +5,7 @@ import { project } from '../lib/markdoc/frontmatter.schema';
 import { community } from '../lib/markdoc/frontmatter.schema';
 import { goal } from '../lib/markdoc/frontmatter.schema';
 import { bucketList } from '../lib/markdoc/frontmatter.schema';
+import { team } from '../lib/markdoc/frontmatter.schema';
 import PageMeta from '../components/PageMeta.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import Intro from '../components/Intro.astro';
@@ -42,6 +43,11 @@ const bucketLists = await readAll({
 });
 
 const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true);
+
+const teams = await readAll({
+  directory: 'team',
+  frontmatterSchema: team,
+});
 ---
 
 <PageLayout>
@@ -51,8 +57,8 @@ const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true
     <section>
       <ul>
         {
-          sortedProjects.map((project) => {
-            const formattedDate = new Date(project.frontmatter.date).toLocaleDateString('en-us', {
+          teams.map((team) => {
+            const formattedDate = new Date(team.frontmatter.date).toLocaleDateString('en-us', {
               year: 'numeric',
               month: 'short',
               day: 'numeric',
@@ -60,15 +66,15 @@ const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true
             return (
               <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
                 <div class='title'>
-                  <a href={project.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
-                    <span>{project.frontmatter.title}</span>
+                  <a href={team.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
+                    <span>{team.frontmatter.title}</span>
                     <span>
                       <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
                     </span>
                   </a>
                 </div>
                 <div class='text-text-muted text-sm italic pt-1'>
-                  <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
+                  <time datetime={team.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
             );
@@ -97,6 +103,34 @@ const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true
                 </div>
                 <div class='text-text-muted text-sm italic pt-1'>
                   <time datetime={community.frontmatter.date.toISOString()}>{formattedDate}</time>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <section class='mt-14'>
+      <ul>
+        {
+          sortedProjects.map((project) => {
+            const formattedDate = new Date(project.frontmatter.date).toLocaleDateString('en-us', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            });
+            return (
+              <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
+                <div class='title'>
+                  <a href={project.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
+                    <span>{project.frontmatter.title}</span>
+                    <span>
+                      <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
+                    </span>
+                  </a>
+                </div>
+                <div class='text-text-muted text-sm italic pt-1'>
+                  <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
             );
