@@ -1,4 +1,4 @@
 ---
-title: 'Bucket List: Do a V12 Graded Climb Indoors + Outdoors'
+title: 'Side Quest: Do a V12 Graded Climb Indoors + Outdoors'
 description: 'In the future'
 ---

@@ -1,4 +1,4 @@
 ---
-title: 'Bucket List: Start a Dog Village'
+title: 'Side Quest: Start a Dog Village'
 description: 'In the future'
 ---
