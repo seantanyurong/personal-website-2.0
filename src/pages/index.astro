@@ -42,12 +42,23 @@ const bucketLists = await readAll({
   frontmatterSchema: bucketList,
 });
 
-const sortedBucketLists = bucketLists.filter((p) => p.frontmatter.draft !== true);
+const sortedBucketLists = bucketLists
+  .filter((p) => p.frontmatter.draft !== true)
+  .sort((a, b) => a.frontmatter.description.localeCompare(b.frontmatter.description));
 
 const teams = await readAll({
   directory: 'team',
   frontmatterSchema: team,
 });
+
+const posts = await readAll({
+  directory: 'blog',
+  frontmatterSchema: blog,
+});
+
+const sortedPosts = posts
+  .filter((p) => p.frontmatter.draft !== true)
+  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
 <PageLayout>
@@ -73,7 +84,7 @@ const teams = await readAll({
                     </span>
                   </a>
                 </div>
-                <div class='text-text-muted text-sm italic pt-1'>
+                <div class='text-text-muted italic'>
                   <time datetime={team.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
@@ -82,7 +93,7 @@ const teams = await readAll({
         }
       </ul>
     </section>
-    <section class='mt-14'>
+    <section class='mt-8'>
       <ul>
         {
           sortedCommunities.map((community) => {
@@ -101,7 +112,7 @@ const teams = await readAll({
                     </span>
                   </a>
                 </div>
-                <div class='text-text-muted text-sm italic pt-1'>
+                <div class='text-text-muted italic'>
                   <time datetime={community.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
@@ -110,7 +121,7 @@ const teams = await readAll({
         }
       </ul>
     </section>
-    <section class='mt-14'>
+    <section class='mt-8'>
       <ul>
         {
           sortedProjects.map((project) => {
@@ -124,12 +135,9 @@ const teams = await readAll({
                 <div class='title'>
                   <a href={project.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
                     <span>{project.frontmatter.title}</span>
-                    <span>
-                      <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
-                    </span>
                   </a>
                 </div>
-                <div class='text-text-muted text-sm italic pt-1'>
+                <div class='text-text-muted italic'>
                   <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
@@ -138,7 +146,7 @@ const teams = await readAll({
         }
       </ul>
     </section>
-    <section class='mt-14'>
+    <section class='mt-8'>
       <ul>
         {
           sortedGoals.map((goal) => {
@@ -147,7 +155,7 @@ const teams = await readAll({
                 <div class='title'>
                   <span>{goal.frontmatter.title}</span>
                 </div>
-                <div class='text-text-muted text-sm italic pt-1'>
+                <div class='text-text-muted italic'>
                   <span>{goal.frontmatter.description}</span>
                 </div>
               </li>
@@ -156,7 +164,8 @@ const teams = await readAll({
         }
       </ul>
     </section>
-    <section class='mt-14'>
+
+    <section class='mt-8'>
       <ul>
         {
           sortedBucketLists.map((bucketList) => {
@@ -165,8 +174,42 @@ const teams = await readAll({
                 <div class='title'>
                   <span>{bucketList.frontmatter.title}</span>
                 </div>
-                <div class='text-text-muted text-sm italic pt-1'>
+                <div class='text-text-muted italic'>
                   <span>{bucketList.frontmatter.description}</span>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+    <section class='mt-8'>
+      <ul>
+        {
+          sortedPosts.map((post) => {
+            const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-us', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            });
+            return (
+              <li class='grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start'>
+                <div class='title'>
+                  {post.frontmatter.external ? (
+                    <a href={post.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
+                      <span>{post.frontmatter.title}</span>
+                      <span>
+                        <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
+                      </span>
+                    </a>
+                  ) : (
+                    <a href={`/blog/${post.slug}`} class='unset hover:text-text-link'>
+                      {post.frontmatter.title}
+                    </a>
+                  )}
+                </div>
+                <div class='text-text-muted italic'>
+                  <time datetime={post.frontmatter.date.toISOString()}>{formattedDate}</time>
                 </div>
               </li>
             );

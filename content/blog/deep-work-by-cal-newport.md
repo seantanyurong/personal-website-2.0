@@ -1,8 +1,7 @@
 ---
 external: false
-title: 'Deep Work by Cal Newport.'
+title: 'Weekly Reflection: Deep Work by Cal Newport.'
 date: 2023-06-17
-draft: true
 ---
 
 Spent Monday to Thursday this week in Krabi, on a work / holiday type of thing. No islands were hopped, and there wasn’t really too much to do if you don’t visit the islands. But I kind of liked that there wasn’t anything to do. I could just walk and be with my own thoughts for days. And be accompanied of course with my favourite thai teas and the occasional street food snack.

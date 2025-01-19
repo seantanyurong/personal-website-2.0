@@ -1,9 +1,8 @@
 ---
 external: false
-title: 'How I Built my First JavaScript Website.'
+title: 'Weekly Reflection: How I Built my First JavaScript Website.'
 description: 'A little late to the JS party.'
 date: 2021-12-19
-draft: true
 ---
 
 I suppose there's quite a bit to unpack in this title. There is a lot that goes into building a website after all. We need to consider:

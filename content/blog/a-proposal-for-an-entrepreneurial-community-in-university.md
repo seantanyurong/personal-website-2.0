@@ -1,9 +1,8 @@
 ---
 external: false
-title: 'A Proposal for an Entrepreneurial Community in University.'
+title: 'Weekly Reflection: A Proposal for an Entrepreneurial Community in University.'
 description: 'The beginning of an idea.'
 date: 2022-01-09
-draft: true
 ---
 
 So I've been talking with some people.

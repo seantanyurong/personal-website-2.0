@@ -1,9 +1,8 @@
 ---
 external: false
-title: '2021: A Year in Review.'
+title: 'Yearly Reflection: 2021'
 description: 'Not too bad of a year.'
 date: 2022-01-02
-draft: true
 ---
 
 As 2021 comes to a close, I thought I might take this opportunity to look back at the things that have happened in the last 365 days.

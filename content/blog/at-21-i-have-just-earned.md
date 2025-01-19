@@ -1,9 +1,8 @@
 ---
 external: false
-title: "At 21, I Have Just Earned $45k as an Upwork Freelancer - here's my one tip."
+title: 'Weekly Reflection: Earning $45k as an Upwork Freelancer at 21.'
 description: 'Just a quick tip.'
 date: 2022-01-08
-draft: true
 ---
 
 My one tip:
