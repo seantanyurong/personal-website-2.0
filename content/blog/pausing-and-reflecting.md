@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: Pausing and Reflecting.'
+title: 'Old Writings: Pausing and Reflecting.'
 description: 'To the drawing board.'
 date: 2023-05-23
 ---

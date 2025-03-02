@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: A Proposal for an Entrepreneurial Community in University.'
+title: 'Old Writings: A Proposal for an Entrepreneurial Community in University.'
 description: 'The beginning of an idea.'
 date: 2022-01-09
 ---

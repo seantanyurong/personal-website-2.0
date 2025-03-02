@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: My 1st landing page after 1 month of learning HTML & CSS.'
+title: 'Old Writings: My 1st landing page after 1 month of learning HTML & CSS.'
 description: 'Coding beginnings.'
 date: 2021-03-24
 ---

@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: The Need for Ruthless Prioritization.'
+title: 'Old Writings: The Need for Ruthless Prioritization.'
 description: 'Am I prioritising?'
 date: 2022-05-13
 ---

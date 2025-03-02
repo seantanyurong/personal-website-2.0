@@ -198,9 +198,6 @@ const sortedPosts = posts
                   {post.frontmatter.external ? (
                     <a href={post.frontmatter.url} target='_blank' class='unset hover:text-text-link'>
                       <span>{post.frontmatter.title}</span>
-                      <span>
-                        <i class='ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square' />
-                      </span>
                     </a>
                   ) : (
                     <a href={`/blog/${post.slug}`} class='unset hover:text-text-link'>

@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: How I Built my First JavaScript Website.'
+title: 'Old Writings: How I Built my First JavaScript Website.'
 description: 'A little late to the JS party.'
 date: 2021-12-19
 ---

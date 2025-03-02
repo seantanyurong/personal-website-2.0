@@ -1,6 +1,6 @@
 ---
 external: false
-title: 'Weekly Reflection: Deep Work by Cal Newport.'
+title: 'Old Writings: Deep Work by Cal Newport.'
 date: 2023-06-17
 ---
 
