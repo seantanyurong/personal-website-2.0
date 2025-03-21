@@ -1,4 +1,4 @@
 ---
-title: 'Side Quest: Get and ride a 1000cc motorcycle'
-description: 'In the future'
+title: 'Side Quest: Get a motorcycle license and buy a bike'
+description: 'Completed'
 ---
