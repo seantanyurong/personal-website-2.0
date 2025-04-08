@@ -6,7 +6,7 @@ date: 2021-03-24
 ---
 
 🌧️
-Here it is - [Olympus Origins](https://olympusorigins.com/)
+Here it is - [Olympus Origins](https://olympusorigins.netlify.app/)
 
 Just wanted to share a simple landing page I built over the past week. Know it’s not exactly something to show off, but I’m quite please with how it turned out.
 
