@@ -1,4 +1,4 @@
 ---
 title: 'Side Quest: Set up a fish tank'
-description: 'In progress'
+description: 'In the future'
 ---
